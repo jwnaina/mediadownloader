@@ -14,7 +14,7 @@ def download_video(url, output_path=DOWNLOADS_PATH):
         yt = YouTube(url)
         stream = yt.streams.get_highest_resolution()
         stream.download(output_path)
-        messagebox.showinfo("Sucesso", f"Download do vídeo concluído: {yt.title}")
+        messagebox.showinfo("Sucesso", f"Download do vídeo do Youtube concluído: {yt.title}")
         progress.stop()
     except Exception as e:
         messagebox.showerror("Erro", f"Erro ao baixar o vídeo: {e}")
